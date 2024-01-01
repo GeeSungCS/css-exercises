@@ -2,47 +2,89 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
 
+/* body * {
+    border: 2px solid red;
+} */
+
 body {
-  margin: 0;
-  background: #eee;
-  font-family: Besley, serif;
+    margin: 0;
+    background: #eee;
+    font-family: Besley, serif;
 }
 
 .header {
-  background: white;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 8px rgba(0,0,0,.1);
+    background: white;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
 }
 
 .profile-image {
-  background: rebeccapurple;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+    background: rebeccapurple;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
 }
 
 .logo {
-  color: rebeccapurple;
-  font-size: 32px;
-  font-weight: 900;
-  font-style: italic;
+    color: rebeccapurple;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 button {
-  border: none;
-  border-radius: 8px;
-  background: rebeccapurple;
-  color: white;
-  padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    background: rebeccapurple;
+    color: white;
+    padding: 8px 24px;
 }
 
 a {
-  /* this removes the line under our links */
-  text-decoration: none;
-  color: rebeccapurple;
+    /* this removes the line under our links */
+    text-decoration: none;
+    color: rebeccapurple;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin-left: 16px;
 }
+
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-right: 5px;
+    gap: 16px;
+}
+
+/* The three things that perplexed me the most so far 
+
+1. The idea of divs being actual containers that will occupy space
+even if you can't see it. They are quite literally empty containers.
+
+2. The idea of display: flex only affecting its direct child and 
+not everything below. So I need to keep track of parents of childs
+
+3. Always keep track of margin and padding, if the dimmensions of
+something is not lining up with random spacing, it's probably the
+default margin and padding which you need to set to 0, 
+or set to a different number. 
+
+*/
