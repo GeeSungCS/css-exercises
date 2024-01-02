@@ -1,26 +1,65 @@
+/* * {
+    border: 2px solid red;
+} */
+
 body {
-  font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 900;
+    font-size: 36px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 52px;
 }
 
 /* do not edit this footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
 }
+
+.pictures {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 200px;
+}
+
+/* Take away after looking at solutions
+
+Think of everything as boxes. So in this exercise I could think of
+one container that is housing all the text and pictures by wrapping
+one div over everything. And then I add another div to group the
+picture and text together as one unit, so one container to house
+the 4 smaller containers holding the text and pictues.
+
+Another problem I need to fix is I'm trying to make the smaller 
+containers do the heavy lifting when I should just be using
+the main container housing it and only micro adjusting the smaller
+when needed rather than the other way around.
+
+On that note don't forget I can use the body as well to do things
+like center the text.
+
+*/
