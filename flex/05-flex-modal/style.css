@@ -1,69 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html, body {
-  height: 100%;
+/* Debugging Tool */
+/* * {
+    border: 2px solid red;
+} */
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  background: #aaa;
-  color: #333;
-  /* I'll give you this one for free lol */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background: #aaa;
+    color: #333;
+    /* I'll give you this one for free lol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal {
-  background: white;
-  width: 480px;
-  border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    background: white;
+    width: 480px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 15px;
 }
 
 .icon {
-  color: royalblue;
-  font-size: 26px;
-  font-weight: 700;
-  background: lavender;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    color: royalblue;
+    font-size: 26px;
+    font-weight: 700;
+    background: lavender;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-button {
-  background: #eee;
-  border-radius: 50%;
-  color: #888;
-  font-weight: 400;
-  font-size: 16px;
-  height: 24px;
-  width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #eee;
-  padding: 0;
+    background: #eee;
+    border-radius: 50%;
+    color: #888;
+    font-weight: 400;
+    font-size: 16px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 0;
 }
 
 button {
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 button.continue {
-  background: royalblue;
-  border: 1px solid royalblue;
-  color: white;
+    background: royalblue;
+    border: 1px solid royalblue;
+    color: white;
 }
 
 button.cancel {
-  background: white;
-  border: 1px solid #ddd;
-  color: royalblue;
+    background: white;
+    border: 1px solid #ddd;
+    color: royalblue;
 }
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconBox {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.topBox {
+    display: flex;
+}
+
+.close-button {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.header {
+    font-weight: bold;
+    font-size: large;
+}
+
+.middleBox {
+    padding: 10px 0;
+}
+
+.bottomBox {
+    margin-top: 15px;
+}
+
+/* So compared to the solution I seemed to have overcomplicated
+it a bit much. All I needed was one container to seperate the 
+icon and then let the modularity of using the entire container
+to do a lot of the work. The missing ingredient I think was 
+flex shrink to keep the nav bar in it's place rather than
+an entire system to give everything its own box.*/
